@@ -21,6 +21,9 @@ cd "/var/www/html/code/wbt2ue"
 sed "s/\/\*##/\/\/##/g" contact.php > /tmp/contact.1
 sed "s/\/\/--/\/\*--/g" /tmp/contact.1 > contact.php
 #
+sed "s/\/\*##/\/\/##/g" imprint.php > /tmp/imprint.1
+sed "s/\/\/--/\/\*--/g" /tmp/imprint.1 > imprint.php
+#
 sed "s/\/\*##/\/\/##/g" login.php > /tmp/login.1
 sed "s/\/\/--/\/\*--/g" /tmp/login.1 > login.php
 #
