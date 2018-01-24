@@ -16,7 +16,7 @@
 # // end exercise */      # line comment is active until sed writes starting /*, this line must not be changed
 # set -x
 # that is done for every file in the list below
-cd "/var/www/html/code/wbt2ue"
+cd "/var/www/html/code/phpintro"
 #
 sed "s/\/\*##/\/\/##/g" contact.php > /tmp/contact.1
 sed "s/\/\/--/\/\*--/g" /tmp/contact.1 > contact.php
