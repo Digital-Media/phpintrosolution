@@ -1,2 +1,2 @@
-# wbt2uesolution
+# phpintrosolution
 Repo for Lessons for PHP Introduction 
