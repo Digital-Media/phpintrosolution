@@ -17,7 +17,7 @@ if (!$this->isEmptyPostField(self::EMAIL) && !$this->isUnique(self::EMAIL)) {
 if ($this->isEmptyPostField(self::PASSWORD1)) {
     $this->errorMessages[self::PASSWORD1] = "Please enter a password.";
 }
-if (!$this->isEmptyPostField(self::PASSWORD1) && !Utilities::isPassword($_POST[self::PASSWORD1], PWD_MIN, PWD_MAX)) {
+if (!$this->isEmptyPostField(self::PASSWORD1) && !Utilities::isPassword($_POST[self::PASSWORD1], 2, 8)) {
     $this->errorMessages[self::PASSWORD1] = "Password must be at least 5 characters long.";
 }
 if ($this->isEmptyPostField(self::PASSWORD2)) {
