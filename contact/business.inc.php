@@ -1,4 +1,6 @@
 <?php
+use phpintro\src\exercises\templates\Contact;
+
 $this->result = $_POST;
 $this->currentView->setParameter(new GenericParameter("result", $this->result));
 $this->currentView->setParameter(new PostParameter(Contact::SUBJECT, true));
