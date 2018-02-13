@@ -1,6 +1,6 @@
 <?php
 
-$users = $this->fileAccess->loadContents(USER_DATA_PATH);
+$users = $this->fileAccess->loadContents(self::USER_DATA_PATH);
 
 if (empty($users)) {
     return true;

@@ -5,7 +5,7 @@
     </div>
     <div class="InputCombo Grid-full">
         <label for="{$request->getName()}" class="InputCombo-label">Request*</label>
-        <textarea id="{$request->getName()}" name="{$request->getName()}" class="InputCombo-field" placeholder="Please enter a Request">{$request->getValue()}</textarea>
+        <textarea id="{$request->getName()}" name="{$request->getName()}" class="InputCombo-field" rows="5" cols="40" placeholder="Please enter a Request">{$request->getValue()}</textarea>
     </div>
     <div class="InputCombo Grid-full">
         <label for="{$email->getName()}" class="InputCombo-label">Email*</label>
