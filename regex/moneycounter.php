@@ -10,8 +10,7 @@
             <h2 >Counting Results</h2>
             <?php
             $input = $_POST["input"];
-            //preg_match("/((^[1-9]| [1-9])([0-9]*)(,[[:digit:]]{2}|,-|)( EUR\h| EUR\b))/g", $input, $matches);
-            preg_match_all("/(^[1-9]| [1-9])([0-9]*)(,[[:digit:]]{2}|,-|)( EUR\h| EUR\b)/", $input, $matches);
+            preg_match_all("/((^[1-9]| [1-9]|(\R[1-9]))([0-9]*)| 0)(,[0-9]{2}|,-|)( EUR\h| EUR\b)/", $input, $matches);
 
             $sum = 0;
             //print_r($matches);
