@@ -25,7 +25,7 @@ class ShowFormInput
      * TODO definieren sie eine Klassenkonstante
      * TODO siehe examples/oophp/DefindeAndConst.php
      */
-    const CLASS_CONST = "I am visible within the class and can be called statically from outside";
+    const CLASS_CONST = "I am visible within the class with self:: and can be called statically from outside with \$object::";
 
     /**
      * TODO definieren sie eine Klasseneigenschaft mit Scope public
@@ -47,7 +47,7 @@ class ShowFormInput
         // TODO Geben sie die oben definierte Klasseneigenschaft hier aus.
         // TODO Gestalten sie die Ausgabe so, dass dabei valides HTML entsteht
         // todo Umgeben sie Dazu den Wert mit einem <p> oder einem anderem Tag
-        echo "<p>\$myVar: " . $this->myPublicVar . " </p>";
+        echo "<p>\$myPublicVar: " . $this->myPublicVar . " </p>";
         // TODO Geben Sie den Wert der globalen Konstante DEBUG aus error_handling.php hier aus
         // TODO Verfahren sie dazu wie bei der Klassenkonstante
         echo "<p>DEBUG: " . DEBUG . " </p>";
@@ -100,7 +100,7 @@ var_dump($showFormInput);
 // TODO Geben sie die oben definierte Klasseneigenschaft hier aus.
 // TODO Gestalten sie die Ausgabe so, dass dabei valides HTML entsteht
 // todo Umgeben sie Dazu den Wert mit einem <p> oder einem anderem Tag
-echo "<p>\$myVar: " . $showFormInput2->myPublicVar . " </p>";
+echo "<p>\$myPublicVar: " . $showFormInput2->myPublicVar . " </p>";
 
 // TODO Geben Sie den Wert der globalen Konstante DEBUG aus error_handling.php hier aus
 // TODO Gestalten sie die Ausgabe so, dass dabei valides HTML entsteht
