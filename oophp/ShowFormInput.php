@@ -87,7 +87,8 @@ var_dump($showFormInput);
 // TODO Gestalten sie die Ausgabe so, dass dabei valides HTML entsteht
 // TODO Umgeben sie Dazu den Wert mit einem <p> oder einem anderem Tag
 echo "<p>CLASS_CONST called statically: " . $showFormInput::CLASS_CONST . "</p>";
-echo "<p>CLASS_CONST called with Classname" . ShowFormInput::CLASS_CONST . "</p>";
+echo "Or other possibility";
+echo "<p>CLASS_CONST called with Classname: " . ShowFormInput::CLASS_CONST . "</p>";
 /*
  * TODO Erzeugen Sie ein zweites Objekt mit unterschiedlichem Namen
  * TODO Benennen sie das Objekt passend zur Klasse und zu PSR1 in camelCase.
