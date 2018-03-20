@@ -25,7 +25,7 @@ class ShowFormInput
      * TODO definieren sie eine Klassenkonstante
      * TODO siehe examples/oophp/DefindeAndConst.php
      */
-    const CLASS_CONST = "I am visible within the class with self:: and can be called statically from outside with \$object::CLASS_CONST";
+    const CLASS_CONST = "I am visible within the class with self:: and can be called statically from outside with \$object::CLASS_CONST or Class::CLASS_CONST";
 
     /**
      * TODO definieren sie eine Klasseneigenschaft mit Scope public
@@ -86,8 +86,8 @@ var_dump($showFormInput);
 // TODO Geben sie die oben definierte Klassenkonstante im Konstruktor aus.
 // TODO Gestalten sie die Ausgabe so, dass dabei valides HTML entsteht
 // TODO Umgeben sie Dazu den Wert mit einem <p> oder einem anderem Tag
-echo "<p>CLASS_CONST: " . $showFormInput::CLASS_CONST . "</p>";
-
+echo "<p>CLASS_CONST called statically: " . $showFormInput::CLASS_CONST . "</p>";
+echo "<p>CLASS_CONST called with Classname" . ShowFormInput::CLASS_CONST . "</p>";
 /*
  * TODO Erzeugen Sie ein zweites Objekt mit unterschiedlichem Namen
  * TODO Benennen sie das Objekt passend zur Klasse und zu PSR1 in camelCase.
