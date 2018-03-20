@@ -25,7 +25,7 @@ class ShowFormInput
      * TODO definieren sie eine Klassenkonstante
      * TODO siehe examples/oophp/DefindeAndConst.php
      */
-    const CLASS_CONST = "I am visible within the class with self:: and can be called statically from outside with \$object::";
+    const CLASS_CONST = "I am visible within the class with self:: and can be called statically from outside with \$object::CLASS_CONST";
 
     /**
      * TODO definieren sie eine Klasseneigenschaft mit Scope public
