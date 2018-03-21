@@ -1,5 +1,5 @@
 <?php
-use phpintro\src\exercises\templates\Contact;
+use phpintro\src\exercises\usingtemplates\Contact;
 
 $this->result = $_POST;
 $this->currentView->setParameter(new GenericParameter("result", $this->result));
