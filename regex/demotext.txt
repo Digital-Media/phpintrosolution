@@ -1,0 +1,17 @@
+ 50,30 EUR is valid
+This 10,70 EUR	 are valid
+(with a tabulator after EUR)
+ 23,30 EUR, is valid
+ 3 EUR, is valid.
+ 12,- EUR. is valid
+-- Begin Invalid ---------------
+ 03,17 EUR and 03,17 EUR
+ ,56 EUR
+ 16,0056 EUR
+ 11.00 EUR
+ 7EUR
+ 13,17 eur
+and 17,7 EUR
+ 15,89 EURhas
+-- End Ivalid ---------------
+Valid at the end of the text is 900,70 EUR
