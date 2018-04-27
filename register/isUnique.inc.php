@@ -1,4 +1,5 @@
 <?php
+use Utilities\Utilities;
 
 $users = $this->fileAccess->loadContents(self::USER_DATA_PATH);
 

@@ -1,8 +1,10 @@
 <?php
+use Utilities\Utilities;
+
 $userID = $this->fileAccess->autoincrementID(self::USER_DATA_PATH, self::USER_ID);
 $user = Utilities::sanitizeFilter($_POST[self::USERNAME]);
 $email = $_POST[self::EMAIL];
-$password = password_hash($_POST[self::PASSWORD1], PASSWORD_DEFAULT);
+$password = password_hash($_POST[self::PASSWORD], PASSWORD_DEFAULT);
 
 $users = $this->fileAccess->loadContents(self::USER_DATA_PATH);
 

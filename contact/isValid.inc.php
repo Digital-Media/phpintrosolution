@@ -1,4 +1,6 @@
 <?php
+use Utilities\Utilities;
+
 if ($this->isEmptyPostField(self::SUBJECT)) {
     $this->errorMessages[self::SUBJECT] = "Please enter a subject.";
 }
