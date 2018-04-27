@@ -1,4 +1,4 @@
 <?php
-use phpintro\src\FileAccess;
+use FileAccess\FileAccess;
 
 $this->fileAccess = new FileAccess();

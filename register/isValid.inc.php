@@ -1,4 +1,6 @@
 <?php
+use Utilities\Utilities;
+
 if ($this->isEmptyPostField(self::USERNAME)) {
     $this->errorMessages[self::USERNAME] = "Please choose a user name.";
 }
@@ -14,15 +16,15 @@ if (!$this->isEmptyPostField(self::EMAIL) && !Utilities::isEmail($_POST[self::EM
 if (!$this->isEmptyPostField(self::EMAIL) && !$this->isUnique(self::EMAIL)) {
     $this->errorMessages[self::EMAIL] = "A user with this e-mail address is already registered. Please choose another one.";
 }
-if ($this->isEmptyPostField(self::PASSWORD1)) {
-    $this->errorMessages[self::PASSWORD1] = "Please enter a password.";
+if ($this->isEmptyPostField(self::PASSWORD)) {
+    $this->errorMessages[self::PASSWORD] = "Please enter a password.";
 }
-if (!$this->isEmptyPostField(self::PASSWORD1) && !Utilities::isPassword($_POST[self::PASSWORD1], 2, 8)) {
-    $this->errorMessages[self::PASSWORD1] = "Password must be at least 5 characters long.";
+if (!$this->isEmptyPostField(self::PASSWORD) && !Utilities::isPassword($_POST[self::PASSWORD], 2, 8)) {
+    $this->errorMessages[self::PASSWORD] = "Password must be at least 5 characters long.";
 }
-if ($this->isEmptyPostField(self::PASSWORD2)) {
-    $this->errorMessages[self::PASSWORD2] = "Please repeat your password.";
+if ($this->isEmptyPostField(self::PASSWORD_RETYPE)) {
+    $this->errorMessages[self::PASSWORD_RETYPE] = "Please repeat your password.";
 }
-if (!$this->isEmptyPostField(self::PASSWORD2) && strcmp($_POST[self::PASSWORD1], $_POST[self::PASSWORD2]) !== 0) {
-    $this->errorMessages[self::PASSWORD2] = "Password re-type does not match.";
+if (!$this->isEmptyPostField(self::PASSWORD_RETYPE) && strcmp($_POST[self::PASSWORD], $_POST[self::PASSWORD_RETYPE]) !== 0) {
+    $this->errorMessages[self::PASSWORD_RETYPE] = "Password re-type does not match.";
 }
