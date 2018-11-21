@@ -1,8 +1,3 @@
-<?php
-use Fhooe\NormForm\Parameter\GenericParameter;
-use Fhooe\NormForm\Parameter\PostParameter;
-use Exercises\UsingTemplates\Contact;
-
 $this->result = $_POST;
 $this->currentView->setParameter(new GenericParameter("result", $this->result));
 $this->currentView->setParameter(new PostParameter(Contact::SUBJECT, true));

@@ -1,6 +1,3 @@
-<?php
-use Utilities\Utilities;
-
 $userID = $this->fileAccess->autoincrementID(self::USER_DATA_PATH, self::USER_ID);
 $user = Utilities::sanitizeFilter($_POST[self::USERNAME]);
 $email = $_POST[self::EMAIL];
@@ -16,3 +13,4 @@ $users[] = [
 ];
 
 $this->fileAccess->storeContents(self::USER_DATA_PATH, $users);
+return true;

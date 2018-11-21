@@ -1,4 +1,3 @@
-<?php
 if ($this->isEmptyPostField(self::USERNAME)) {
     $this->errorMessages[self::USERNAME] = "Please enter your user name.";
 }

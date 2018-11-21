@@ -1,4 +1,3 @@
-<?php
 $this->imprint = <<<IMPRINT
         <h4> Impressum </h4>
         <p> Distribution of My Best Pictures </p>
