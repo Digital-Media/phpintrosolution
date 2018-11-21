@@ -1,6 +1,3 @@
-<?php
-use FileAccess\FileAccess;
-
 $users = $this->fileAccess->loadContents(self::USER_DATA_PATH);
 
 foreach ($users as $user) {
