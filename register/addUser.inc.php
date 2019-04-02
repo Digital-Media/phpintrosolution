@@ -1,5 +1,5 @@
 $userID = $this->fileAccess->autoincrementID(self::USER_DATA_PATH, self::USER_ID);
-$user = Utilities::sanitizeFilter($_POST[self::USERNAME]);
+$user = $_POST[self::USERNAME];
 $email = $_POST[self::EMAIL];
 $password = password_hash($_POST[self::PASSWORD], PASSWORD_DEFAULT);
 
