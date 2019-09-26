@@ -1,7 +1,7 @@
 
 window.projectVersion = 'master';
 
-(function(root) {
+(function (root) {
 
     var bhIndex = null;
     var rootPath = '';
@@ -30,7 +30,8 @@ window.projectVersion = 'master';
     ];
 
     /** Tokenizes strings by namespaces and functions */
-    function tokenizer(term) {
+    function tokenizer(term)
+    {
         if (!term) {
             return [];
         }
@@ -62,7 +63,7 @@ window.projectVersion = 'master';
          * Cleans the provided term. If no term is provided, then one is
          * grabbed from the query string "search" parameter.
          */
-        cleanSearchTerm: function(term) {
+        cleanSearchTerm: function (term) {
             // Grab from the query string
             if (typeof term === 'undefined') {
                 var name = 'search';
@@ -78,7 +79,7 @@ window.projectVersion = 'master';
         },
 
         /** Searches through the index for a given term */
-        search: function(term) {
+        search: function (term) {
             // Create a new search index if needed
             if (!bhIndex) {
                 bhIndex = new Bloodhound({
@@ -93,7 +94,7 @@ window.projectVersion = 'master';
             }
 
             results = [];
-            bhIndex.get(term, function(matches) {
+            bhIndex.get(term, function (matches) {
                 results = matches;
             });
 
@@ -102,7 +103,7 @@ window.projectVersion = 'master';
             }
 
             // Fix the element links based on the current page depth.
-            return $.map(results, function(ele) {
+            return $.map(results, function (ele) {
                 if (ele.link.indexOf('..') > -1) {
                     return ele;
                 }
@@ -115,17 +116,17 @@ window.projectVersion = 'master';
         },
 
         /** Get a search class for a specific type */
-        getSearchClass: function(type) {
+        getSearchClass: function (type) {
             return searchTypeClasses[type] || searchTypeClasses['_'];
         },
 
         /** Add the left-nav tree to the site */
-        injectApiTree: function(ele) {
+        injectApiTree: function (ele) {
             ele.html(treeHtml);
         }
     };
 
-    $(function() {
+    $(function () {
         // Modify the HTML to work correctly based on the current depth
         rootPath = $('body').attr('data-root-path');
         treeHtml = treeHtml.replace(/href="/g, 'href="' + rootPath);
@@ -135,36 +136,36 @@ window.projectVersion = 'master';
     return root.Sami;
 })(window);
 
-$(function() {
+$(function () {
 
     // Enable the version switcher
-    $('#version-switcher').change(function() {
+    $('#version-switcher').change(function () {
         window.location = $(this).val()
     });
 
     
         // Toggle left-nav divs on click
-        $('#api-tree .hd span').click(function() {
+        $('#api-tree .hd span').click(function () {
             $(this).parent().parent().toggleClass('opened');
         });
 
         // Expand the parent namespaces of the current page.
         var expected = $('body').attr('data-name');
 
-        if (expected) {
-            // Open the currently selected node and its parents.
-            var container = $('#api-tree');
-            var node = $('#api-tree li[data-name="' + expected + '"]');
-            // Node might not be found when simulating namespaces
-            if (node.length > 0) {
-                node.addClass('active').addClass('opened');
-                node.parents('li').addClass('opened');
-                var scrollPos = node.offset().top - container.offset().top + container.scrollTop();
-                // Position the item nearer to the top of the screen.
-                scrollPos -= 200;
-                container.scrollTop(scrollPos);
-            }
+    if (expected) {
+        // Open the currently selected node and its parents.
+        var container = $('#api-tree');
+        var node = $('#api-tree li[data-name="' + expected + '"]');
+        // Node might not be found when simulating namespaces
+        if (node.length > 0) {
+            node.addClass('active').addClass('opened');
+            node.parents('li').addClass('opened');
+            var scrollPos = node.offset().top - container.offset().top + container.scrollTop();
+            // Position the item nearer to the top of the screen.
+            scrollPos -= 200;
+            container.scrollTop(scrollPos);
         }
+    }
 
     
     
@@ -182,7 +183,7 @@ $(function() {
         });
 
         // The selection is direct-linked when the user selects a suggestion.
-        form.on('typeahead:selected', function(e, suggestion) {
+        form.on('typeahead:selected', function (e, suggestion) {
             window.location = suggestion.link;
         });
 

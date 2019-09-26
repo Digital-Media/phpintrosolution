@@ -14,7 +14,11 @@
             // preg_match_all("/( [1-9])([0-9]*)(,[0-9]{2}|,-|)( EUR\b)/", $input, $matches);
             // teststring.txt, $matches[1] contains only decimals additional () around decimals
             // preg_match_all("/(( [1-9])([0-9]*)(,[0-9]{2}|,-|))( EUR\b)/", $input, $matches);
-            preg_match_all("/(( [1-9]{1}|^[1-9]|\R[1-9]| 0[^0-9]|^0|\R0[^0-9])([0-9]*)(,[0-9]{2}|,-|))( EUR\b)/", $input, $matches); // challange.txt
+            preg_match_all(
+                "/(( [1-9]{1}|^[1-9]|\R[1-9]| 0[^0-9]|^0|\R0[^0-9])([0-9]*)(,[0-9]{2}|,-|))( EUR\b)/",
+                $input,
+                $matches
+            ); // challenge.txt
 
             $sum = 0;
             //print_r($matches);
@@ -41,7 +45,8 @@
                 $sum += $amount;
             }
             //*/
-            /*// simple version with $matches[1] containing all valid decimals without " EUR". Additional () around the decimals are necessary in regex
+            /*// simple version with $matches[1] containing all valid decimals without " EUR".
+            // Additional () around the decimals are necessary in regex
             foreach ($matches[1] as $money) {
                 $amount[]= str_replace(",", ".", $money);
             }
@@ -50,7 +55,8 @@
 
 
             echo "<p>Original text was: <blockquote>" . nl2br(htmlentities($input)) . "</blockquote></p>", PHP_EOL;
-            echo "<p>The total amount is: <strong>" . number_format($sum, 2, ',', '.') . " EUR</strong></p>", PHP_EOL;
+            echo "<p>The total amount is: <strong>" . number_format($sum, 2, ',', '.')
+                . " EUR</strong></p>", PHP_EOL;
             ?>
             <a href="index.html">Start Over</a>
 </body>
