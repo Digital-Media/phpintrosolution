@@ -58,7 +58,8 @@ class ShowFormInput
      * TODO Definieren Sie Methode mit Scope public
      * TODO siehe examples/oophp/Inheritance.php
      */
-    public function Show() {
+    public function Show()
+    {
         // TODO Innerhalb der Methode
 
         // TODO Geben Sie in dieser Methode den Inhalt des $_POST-Arrays das von index.html geschickt wird aus

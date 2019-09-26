@@ -8,7 +8,7 @@
 
 namespace phpintrosolution;
 
-class showpsr
+class ShowPSR
 {
     private $bool = true;
 }
