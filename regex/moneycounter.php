@@ -9,6 +9,7 @@
             <p>Using Regular Expressions</p>
             <h2 >Counting Results</h2>
             <?php
+            #header("X-XSS-Protection: 0");
             $input = $_POST["input"];
             // teststring.txt, no $matches[1] without " EUR"
             // preg_match_all("/( [1-9])([0-9]*)(,[0-9]{2}|,-|)( EUR\b)/", $input, $matches);
@@ -54,7 +55,9 @@
             //*/
 
 
+            #echo "<p>Original text was: <blockquote>" . nl2br($input) . "</blockquote></p>", PHP_EOL;
             echo "<p>Original text was: <blockquote>" . nl2br(htmlentities($input)) . "</blockquote></p>", PHP_EOL;
+            #echo "<p>Original text was: <blockquote>" . $input . "</blockquote></p>", PHP_EOL;
             echo "<p>The total amount is: <strong>" . number_format($sum, 2, ',', '.')
                 . " EUR</strong></p>", PHP_EOL;
             ?>
